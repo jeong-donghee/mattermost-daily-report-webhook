@@ -26,8 +26,8 @@ def morning_plan():
     send_message(f"## 오늘의 계획 {format_date_string(today)}")
 
 def evening_summary():
-    yesterday = datetime.now() - timedelta(days=1)
-    send_message(f"## 어제의 진행 현황 {format_date_string(yesterday)}")
+    today = datetime.now()
+    send_message(f"## 어제의 진행 현황 {format_date_string(today)}")
 
 # 평일만 실행
 for day in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']:
